@@ -1,7 +1,7 @@
 # AU423_Project
 Robot with an arm in a environment 
 You can either run it on RDS or on ROS Noetic directly
-## Create a ROSject
+## Option 1 :  Create a ROSject
 
 Connect to [RDS](https://app.theconstructsim.com/#/) and enter your username and password if needed.
 
@@ -15,7 +15,7 @@ Then click on **Create** and run the ROSject.
 
 
 
-## Option 1 : Cloning the Github repository for RDS
+## Cloning the Github repository for RDS
 
 Open a terminal (Web shell) and follow the instructions **ONE AFTER THE OTHER**:
 
@@ -26,6 +26,8 @@ cd ~/catkin_ws && catkin_make && source ~/catkin_ws/devel/setup.bash
 
 ## Option 2 :Cloning the Github repository for ROS Noetic on Ubuntu
 
+Open a terminal and follow the instructions **ONE AFTER THE OTHER**:
+
 ```bash
 cd ~/catkin_ws
 mkdir AU423_Project && cd AU423_Project
@@ -34,7 +36,7 @@ git clone https://github.com/maximilianmorlion/AU423_Project.git
 cd ~/catkin_ws && catkin_make && source ~/catkin_ws/devel/setup.bash
 ```
 
-
+## Last Step
 Then you can launch the robot and the environment with the command: 
 ```bash
 roslaunch description_robot_ipsa simu.launch
