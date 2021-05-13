@@ -1,0 +1,55 @@
+<?xml version='1.0'?>
+<robot>
+<transmission name="arm1_trans">
+<type> transmission_interface/SimpleTransmission</type>
+<joint name ="base_link_to_arm1">
+<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+</joint>
+<actuator name = "motor1">
+    <mechanicalReduction>1</mechanicalReduction>
+</actuator>
+</transmission>
+
+<transmission name="arm2_trans">
+<type> transmission_interface/SimpleTransmission</type>
+<joint name ="arm1_to_arm2">
+<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+</joint>
+<actuator name = "motor2">
+    <mechanicalReduction>1</mechanicalReduction>
+</actuator>
+</transmission>
+
+<transmission name="arm2bis_trans">
+<type> transmission_interface/SimpleTransmission</type>
+<joint name ="arm2_to_arm2bis">
+<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+</joint>
+
+<actuator name = "motor3">
+    <mechanicalReduction>1</mechanicalReduction>
+</actuator>
+</transmission>
+
+<transmission name="arm3_trans">
+<type> transmission_interface/SimpleTransmission</type>
+<joint name ="arm2bis_to_arm3">
+<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+</joint>
+<actuator name = "motor4">
+    <mechanicalReduction>1</mechanicalReduction>
+</actuator>
+</transmission>
+
+<transmission name="end_effec_trans">
+<type> transmission_interface/SimpleTransmission</type>
+<joint name ="arm3_to_end_effector">
+<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+</joint>
+<actuator name = "motor5">
+    <mechanicalReduction>1</mechanicalReduction>
+</actuator>
+</transmission>
+
+
+</robot>

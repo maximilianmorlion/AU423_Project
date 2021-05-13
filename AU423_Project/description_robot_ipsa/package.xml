@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>description_robot_ipsa</name>
+  <version>0.0.0</version>
+  <description>The description_robot_ipsa package</description>
+
+  <maintainer email="johvany@todo.todo">johvany</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+<exec_depend>gazebo_ros</exec_depend>
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- gazebo_ros_paths_plugin automatically adds these to
+        GAZEBO_PLUGIN_PATH and GAZEBO_MODEL_PATH when you do this export inside
+        the package.xml file. You can than use URIs of type model://my_package/stuff. -->
+    <gazebo_ros                                                                 
+        gazebo_model_path="${prefix}/models" /> 
+        
+  </export>
+</package>

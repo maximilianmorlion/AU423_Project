@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+ <arg name="world" default="group4"/>
+  <!-- start empty world -->
+  <param name="use_sim_time" value="true" />
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+	 <arg name="world_name" value="$(find description_robot_ipsa)/worlds/$(arg world).world"/>
+    		<arg name="paused" value="true"/>
+		<arg name="use_sim_time" value="true"/>
+		<arg name="gui" value="true"/>
+		<arg name="headless" value="false"/>
+		<arg name="debug" value="false"/>
+	</include>
+
+  <include file="$(find description_robot_ipsa)/launch/display.launch"/>
+  
+  <include file="$(find custom_control)/launch/control.launch"/>
+
+  <node name="spawn_robot_project" pkg="gazebo_ros" type="spawn_model"
+   args=" -urdf -param /robot_description -model robot_project -J base_link_to_arm1 0 -J arm1_to_arm2 0 -J arm2_to_arm2bis 0 -J arm2bis_to_arm3 0 -J arm3_to_end_effector 0 -unpause"
+   respawn="false" output="screen" />
+   
+</launch>
