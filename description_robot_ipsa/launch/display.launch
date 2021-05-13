@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="model" default="$(find description_robot_ipsa)/urdf/robot_project.xacro"/>
+  <param name="robot_description" command="xacro --inorder $(arg model)" />
+
+
+  <!-- ROBOT STATE PUBLISHER -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+   <remap from="/joint_states" to="robot_project/joint_states"/>
+  </node>
+
+  <!-- JOINT STATE PUBLISHER GUI -->
+   <!--<node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui"/> -->
+
+  <!-- RVIZ -->
+ <!--<node name="rviz" pkg="rviz" type="rviz" args="-d $(find description_robot_ipsa)/rviz/config.rviz"/>-->
+</launch>
