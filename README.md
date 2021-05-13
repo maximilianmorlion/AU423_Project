@@ -1,8 +1,6 @@
 # AU423_Project
 Robot with an arm in a environment 
 
-# AU423_IPSA
-
 ## Create a ROSject
 
 Connect to [RDS](https://app.theconstructsim.com/#/) and enter your username and password if needed.
