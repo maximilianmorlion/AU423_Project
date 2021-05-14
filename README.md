@@ -42,7 +42,9 @@ Then you can launch the robot and the environment with the command:
 roslaunch description_robot_ipsa simu.launch
 ```
 All the commands to control the robot are written in the console !
+
 YOU NEED TO BE IN THE CONSOLE TO CONTROL IT OTHERWISE IT DOESN'T REGISTER THE KEYS.
+
 Enjoy ! 
 
 
